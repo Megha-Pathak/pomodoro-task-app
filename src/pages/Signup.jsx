@@ -112,7 +112,7 @@ const Signup = () => {
                 setSignupData({ ...signupData, firstName: e.target.value })
               }
               value={signupData.firstName}
-              className="text-sm font-semibold rounded-2xl py-2 px-4 placeholder:text-gray-500 placeholder:text-sm placeholder:font-normal border-2  border-cyan-400"
+              className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="John"
               type="text"
               name=""
@@ -130,7 +130,7 @@ const Signup = () => {
                 setSignupData({ ...signupData, lastName: e.target.value })
               }
               value={signupData.lastName}
-              className="text-sm font-semibold rounded-2xl py-2 px-4 placeholder:text-gray-500 placeholder:text-sm placeholder:font-normal border-2  border-cyan-400"
+              className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Doe"
               type="text"
               name=""
@@ -148,7 +148,7 @@ const Signup = () => {
                 setSignupData({ ...signupData, email: e.target.value })
               }
               value={signupData.email}
-              className="text-sm font-semibold rounded-2xl py-2 px-4 placeholder:text-gray-500 placeholder:text-sm placeholder:font-normal border-2  border-cyan-400"
+              className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder=" johndoe@gmail.com"
               type="email"
               name=""
@@ -168,7 +168,7 @@ const Signup = () => {
                   setSignupData({ ...signupData, password: e.target.value })
                 }
                 value={signupData.password}
-                className="text-sm w-full font-semibold rounded-2xl py-2 px-4 placeholder:text-gray-500 placeholder:text-xl placeholder:font-normal border-2  border-cyan-400"
+                className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="·········"
                 type={showPasswords.password ? "text" : "password"}
                 name=""
@@ -179,6 +179,7 @@ const Signup = () => {
               <span className="eye-icon absolute bottom-3 right-4 cursor-pointer text-lg">
                 {showPasswords.password ? (
                   <span
+                    className="text-gray-200"
                     onClick={() =>
                       setShowPasswords({
                         ...showPasswords,
@@ -191,6 +192,7 @@ const Signup = () => {
                   </span>
                 ) : (
                   <span
+                    className="text-gray-200"
                     onClick={() =>
                       setShowPasswords({
                         ...showPasswords,
@@ -219,7 +221,7 @@ const Signup = () => {
                   })
                 }
                 value={signupData.passwordAgain}
-                className="text-sm w-full font-semibold rounded-2xl py-2 px-4 placeholder:text-gray-500 placeholder:text-xl placeholder:font-normal border-2  border-cyan-400"
+                className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="·········"
                 type={showPasswords.passwordAgain ? "text" : "password"}
                 name=""
@@ -230,6 +232,7 @@ const Signup = () => {
               <span className="eye-icon absolute bottom-3 right-4 cursor-pointer text-lg">
                 {showPasswords.passwordAgain ? (
                   <span
+                    className="text-gray-200"
                     onClick={() =>
                       setShowPasswords({
                         ...showPasswords,
@@ -241,6 +244,7 @@ const Signup = () => {
                   </span>
                 ) : (
                   <span
+                    className="text-gray-200"
                     onClick={() =>
                       setShowPasswords({
                         ...showPasswords,
@@ -261,7 +265,7 @@ const Signup = () => {
 
             <button
               type="submit"
-              className="bg-cyan-400 rounded-2xl rounded-bl-none text-slate-800 py-2 px-4 mt-2"
+              className="text-lg text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
             >
               Signup
             </button>

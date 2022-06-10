@@ -87,16 +87,17 @@ const Login = () => {
             <h1 className="font-bold text-xl text-cyan-400">Login</h1>
 
             <label
-              className="text-left font-bold text-xs text-slate-200"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               htmlFor="signup-email"
             >
               Email
             </label>
+
             <input
               onChange={(e) =>
                 setLoginData({ ...loginData, email: e.target.value })
               }
-              className="py-2 px-4 rounded-2xl text-sm font-semibold placeholder:text-gray-500 placeholder:text-sm placeholder:font-normal border-2  border-cyan-400"
+              className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="johndoe@gmail.com"
               type="email"
               name=""
@@ -115,14 +116,14 @@ const Login = () => {
                 onChange={(e) =>
                   setLoginData({ ...loginData, password: e.target.value })
                 }
-                className="py-2 px-4 w-full rounded-2xl text-sm font-semibold placeholder:text-gray-500 placeholder:text-xl placeholder:font-normal border-2  border-cyan-400"
+                className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="·········"
                 type={showPassword ? "text" : "password"}
                 name=""
                 value={loginData.password}
                 id="signup-password"
               />
-              <span className="eye-icon absolute bottom-3 right-4 cursor-pointer">
+              <span className="eye-icon absolute bottom-3 right-4 cursor-pointer text-gray-200">
                 {showPassword ? (
                   <span onClick={() => setShowPassword(!showPassword)}>
                     <FaEye />
@@ -143,13 +144,13 @@ const Login = () => {
 
             <button
               type="submit"
-              className=" text-cyan-400 border-2 border-cyan-400 font-bold py-1 px-4 rounded-2xl rounded-bl-none"
+              className="text-lg text-white  from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br  border border-cyan-600  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
             >
               Login
             </button>
             <button
               onClick={guestLoginHandler}
-              className=" bg-cyan-400 text-slate-800 font-bold py-2 px-4 rounded-2xl rounded-tr-none"
+              className="text-lg text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
             >
               Login as Guest
             </button>

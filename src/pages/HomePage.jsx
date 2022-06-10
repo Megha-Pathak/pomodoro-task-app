@@ -24,7 +24,7 @@ const HomePage = () => {
 
             <button
               onClick={() => getStartedBtnHandler()}
-              className="bg-cyan-600 text-white font-bold px-12 py-4 rounded-3xl rounded-br-none mt-16 ml-12"
+              className="text-2xl text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50  rounded-lg px-12 py-4 text-center mr-2 mb-2  mt-12"
             >
               Get Started
             </button>

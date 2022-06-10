@@ -3,7 +3,7 @@ import { Router } from "./Router";
 
 function App() {
   return (
-    <div className="bg-slate-800">
+    <div className="bg-slate-800 min-h-screen">
       <Navbar />
       <Router />
     </div>
