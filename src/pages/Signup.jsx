@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import axios from "axios";
@@ -94,8 +93,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="Signup">
-      <Navbar />
+    <>
       <main className="flex justify-center">
         <div className="signup-container w-1/2">
           <form
@@ -273,7 +271,7 @@ const Signup = () => {
           </form>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 

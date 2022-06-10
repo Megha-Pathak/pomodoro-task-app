@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth-context";
 
@@ -13,7 +12,6 @@ const HomePage = () => {
   };
   return (
     <>
-      <Navbar />
       <main className="main-landing grid grid-cols-2">
         <div className="left-landing-container flex justify-center">
           <div className="left-cta-container w-3/4 mt-32 flex flex-col items-start">

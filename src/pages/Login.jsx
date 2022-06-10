@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
@@ -21,7 +20,7 @@ const Login = () => {
     message: "",
   });
 
-  const { auth, setAuth } = useAuth();
+  const { setAuth } = useAuth();
 
   const loginExistingUser = async () => {
     try {
@@ -78,8 +77,7 @@ const Login = () => {
   };
 
   return (
-    <div className="Login">
-      <Navbar />
+    <>
       <main className="flex justify-center mt-16">
         <div className="signup-container w-1/2">
           <form
@@ -162,7 +160,7 @@ const Login = () => {
           </form>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 
