@@ -137,7 +137,7 @@ const Login = () => {
             </div>
 
             {showLoginError.showError ? (
-              <div className="signup-error-container text-xs font-bold text-orange-500 border-2 border-orange-500 py-1 rounded-xl">
+              <div className="signup-error-container text-xs font-bold text-red-500 border-2 border-red-500 py-1 px-2">
                 <p> {showLoginError.message} </p>
               </div>
             ) : null}
