@@ -99,7 +99,7 @@ const SingleTask = () => {
                       onClick={() => setIsBreak(false)}
                       className=" font-semibold rounded-lg px-5 py-2 border-2 border-cyan-400 text-cyan-400"
                     >
-                      Work
+                      Focus
                     </button>
                   ) : (
                     <button

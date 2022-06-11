@@ -28,8 +28,8 @@ const CircularTimer = ({
   }, [breakCurrentTime, isPausedBreak]);
 
   return (
-    <div className="BreakTimer flex flex-col items-center">
-      <div className="timer-container w-2/3">
+    <div className="flex flex-col items-center">
+      <div className="timer-container w-1/2">
         <CircularProgressbar
           value={breakCurrentTime}
           maxValue={300}
@@ -38,7 +38,7 @@ const CircularTimer = ({
           styles={buildStyles({
             pathColor: "#F1B814",
             textColor: "#F1B814",
-            textSize: "10px",
+            textSize: "18px",
           })}
         />
       </div>
@@ -72,16 +72,16 @@ const CircularTimer = ({
         {isBreak ? (
           <button
             onClick={() => setIsBreak(false)}
-            className=" font-semibold rounded-lg px-5 py-2 border-2 border-teal-400 text-teal-400"
+            className="text-lg text-white  from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br  border border-cyan-600  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
           >
-            Work
+            Focus
           </button>
         ) : (
           <button
             onClick={() => {
               setIsBreak(true);
             }}
-            className=" font-semibold rounded-lg px-5 py-2 border-2 border-teal-400 text-teal-400"
+            className="text-lg text-white  from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br  border border-cyan-600  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
           >
             Break
           </button>

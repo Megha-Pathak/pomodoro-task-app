@@ -39,21 +39,21 @@ const Navbar = () => {
           }}
           className="font-bold text-lg ml-8 text-teal-100"
         >
-          tasks
+          My Tasks
         </button>
 
         {auth.isLoggedIn ? (
           <div className="ml-8 mr-8 flex flex-col items-start text-teal-100 relative">
             <button
               onClick={logoutHandler}
-              className="bg-cyan-400 text-white font-medium px-6 py-2 rounded-2xl rounded-bl-none ml-8 mr-8"
+              className="text-lg text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
             >
               Logout
             </button>
           </div>
         ) : (
           <Link to="/login">
-            <button className="bg-cyan-400 text-white font-medium px-6 py-2 rounded-2xl rounded-bl-none ml-8 mr-8">
+            <button className="text-lg text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3 ml-4">
               Login
             </button>
           </Link>

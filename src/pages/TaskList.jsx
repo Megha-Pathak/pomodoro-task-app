@@ -42,7 +42,7 @@ const TaskList = () => {
   const [showAddTaskModal, setShowAddTaskModal] = useState(false);
 
   return (
-    <div className="TaskList">
+    <>
       {showAddTaskModal && (
         <div className="addTaskModalBackground h-screen w-screen fixed flex justify-center items-center z-10">
           <div className="addTaskModalContainer rounded-xl p-4 mb-56 bg-slate-800">
@@ -60,7 +60,7 @@ const TaskList = () => {
                 <AiOutlineClose />
               </button>
               <input
-                className="border-2 border-cyan-600 px-4 py-2 rounded-xl font-medium"
+                className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 onChange={(e) =>
                   setTaskData({ ...taskData, title: e.target.value })
                 }
@@ -72,7 +72,7 @@ const TaskList = () => {
                 placeholder="Add Title"
               />
               <textarea
-                className="border-2 border-cyan-600 px-4 py-2 rounded-xl font-medium"
+                className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 onChange={(e) =>
                   setTaskData({ ...taskData, description: e.target.value })
                 }
@@ -85,7 +85,7 @@ const TaskList = () => {
                 placeholder="Add Description"
               ></textarea>
               <input
-                className="border-2 border-cyan-600 px-4 py-2 rounded-xl font-medium"
+                className="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 onChange={(e) =>
                   setTaskData({ ...taskData, time: e.target.value })
                 }
@@ -108,25 +108,17 @@ const TaskList = () => {
                       isDone: false,
                     });
                   }}
-                  className="border-2 border-cyan-600 text-cyan-400 font-semibold rounded-xl px-4 py-2"
+                  className="text-lg text-white  from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br  border border-cyan-600  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
                 >
-                  Cancel
+                  Close
                 </button>
-                {isEditingTask.editing ? (
-                  <button
-                    type="submit"
-                    className="add-task-button border-2 border-cyan-600 bg-cyan-600 font-medium text-slate-800 rounded-xl px-8 py-2"
-                  >
-                    Save
-                  </button>
-                ) : (
-                  <button
-                    type="submit"
-                    className="add-task-button border-2 border-cyan-600 bg-cyan-600 font-medium text-slate-800 rounded-xl px-8 py-2"
-                  >
-                    Add
-                  </button>
-                )}
+
+                <button
+                  type="submit"
+                  className="text-lg text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50  rounded-lg px-6 py-2 text-center mr-2 mb-2 mt-3"
+                >
+                  {isEditingTask.editing ? `Save` : `Add`}
+                </button>
               </div>
             </form>
           </div>
@@ -141,11 +133,9 @@ const TaskList = () => {
           We have only {tasks.length} for you to get done! Yay!
         </h1>
 
-        <div className="task-list-container px-4 py-12 bg-slate-800 rounded-xl my-8 mx-12">
-          <div className="flex justify-between mb-4 items-center">
-            <p className="text-normal text-teal-100 font-bold text-left ml-24">
-              My Tasks
-            </p>
+        <div className="task-list-container py-6 bg-slate-800 rounded-lg my-8   ">
+          <div className="flex justify-center md:flex-row flex-col mb-4 items-center">
+            <p className="text-2xl md:mx-8 text-teal-100 font-bold">My Tasks</p>
             <button
               onClick={() => {
                 setShowAddTaskModal(true);
@@ -160,7 +150,7 @@ const TaskList = () => {
                   editingTaskId: "",
                 });
               }}
-              className="mr-24 text-2xl rounded-full px-4 py-1 bg-cyan-600 text-slate-800"
+              className="text-2xl md:mx-8 rounded-lg px-4 py-1 my-4 bg-cyan-600 text-slate-800"
             >
               +
             </button>
@@ -171,7 +161,7 @@ const TaskList = () => {
                 <div
                   key={task._id}
                   onClick={() => navigate(`/tasks/${task._id}`)}
-                  className="single-task-container flex items-center border-dashed border-2 border-cyan-600 py-4 px-8 rounded-lg cursor-pointer w-4/5"
+                  className="single-task-container flex items-center border-r-4 border-b-4 border-cyan-600 py-4 px-8 cursor-pointer w-4/5"
                 >
                   <div className="task-title-container flex items-center">
                     <input
@@ -228,7 +218,7 @@ const TaskList = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
